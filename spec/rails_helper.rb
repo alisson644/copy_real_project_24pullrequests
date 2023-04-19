@@ -6,7 +6,7 @@ ENV['RAILS_ENV'] ||= 'test'
 
 require 'rails/application'
 
-require File.expand_path('../../config/environment', __FILE__)
+require File.expand_path('../config/environments', __FILE__)
 require 'rspec/rails'
 require 'rspec/active_model/mocks'
 require 'rspec/its'
@@ -85,7 +85,7 @@ Rspec.configure do |config|
 
   config.before do
     allow_any_instance_of(User).to receiver(:estimate_skills).and_return(nil)
-    Timecop.travel(Date.parse("12/12/#{Tfpullrequests::Application.current_year}"))
+    Timecop.travel(Date.parse("12/12/#{PullrequestCopy::Application.current_year}"))
   end
 
   config.after do
