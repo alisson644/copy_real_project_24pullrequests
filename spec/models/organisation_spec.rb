@@ -25,7 +25,7 @@ describe Organisation, type: :model do
     create :organisation, login: 'most_low_org', users: [most_pr_user, low_pr_user]
     create :organisation, login: 'some_org', users: [some_pr_user]
     create :organisation, login: 'all_org', users: [most_pr_user, some_pr_user, low_pr_user]
-    create :organisation, login: 'most_some_org', [most_pr_user, some_pr_user]
+    create :organisation, login: 'most_some_org', users: [most_pr_user, some_pr_user]
 
     update_contribution_counts
   end
