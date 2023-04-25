@@ -8,7 +8,7 @@ describe Project, type: :model do
   it { is_expected.to validate_uniquess_of(:github_url).
     case_insensitive.with_message('Project has already been suggested.') }
   it { is_expected.to validate_length_of(:description).is_at_least(20).is_at_most(200) }
-  
+
   it { is_expected.to have_db_column(:contribulator).of_type(:integer) }
   it { is_expected.to have_db_column(:homepage).of_type(:string) }
 
@@ -106,7 +106,7 @@ describe Project, type: :model do
 
     it 'scores the project the scorer' do
       scorer = double(:popularity_scorer, score: 10)
-      expect(PopularityScorer).to receive(:new).with('username', 'token', project).and_return(socorer)
+      expect(PopularityScorer).to receive(:new).with('username', 'token', project).and_return(scorer)
 
       expect(project.score('username', 'token')).to eq(10)
     end
