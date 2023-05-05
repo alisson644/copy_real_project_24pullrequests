@@ -23,7 +23,7 @@ describe 'Twitter', type: :request do
         expect(user).to be_twitter_linked
       end
     end
-    
+
     context 'wwhen the user has already linked their twitter account' do
       let(:user) { create :user, :email_frequency => 'never', :twitter_token => 'foo', :twitter_secret => 'bar' }
       it { should_not have_link('Link Your Twitter Account') }
@@ -36,7 +36,7 @@ describe 'Twitter', type: :request do
                     :twitter_nickname => Faker::Lorem.word,
                     :twitter_token => SecureRandom.hex,
                     :twitter_secret => SecureRandom.hex }
-      
+
       it { should have_link("@#{user.twitter_nickname}", :href => "https://twitter.com/#{user.twitter_nickname}") }
       it { should have_link('Unlink Twitter Account', :href => twitter_remove_path) }
 
