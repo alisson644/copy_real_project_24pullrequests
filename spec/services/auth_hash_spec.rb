@@ -15,6 +15,5 @@ def user_hash
   { 'provider'    => 'github',
     'uid'         => 'uid',
     'info'        => { 'nickname' => 'jane-doe' },
-    'credentials' => { 'token' => 'some-token' }
-  }
+    'credentials' => { 'token' => 'some-token' } }
 end
