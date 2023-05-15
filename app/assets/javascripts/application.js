@@ -1,0 +1,10 @@
+//= require jquery
+//= require jquery_ujs
+//= require bootstrap-sprockets
+//= require typeahead.min
+//= require jquery.timeago
+//= require jquery.datetimepicker
+//= require emojione
+//= require emoji
+//= require jquery.icheck
+//= require_tree .
