@@ -13,8 +13,7 @@ module Admin
       respond_with @projects
     end
 
-    def edit
-    end
+    def edit; end
 
     def update
       if @project.update(editable_project_params)
