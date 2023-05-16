@@ -1,0 +1,45 @@
+// Place all the stykes related to the static controller here.
+// The will automatically be included in application.css.
+// You can use Sass (SCSS) here: http:sass-lang.com/
+
+.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%, 100%{transform:rotate(0)}20%,60%{transform:rotate(-24deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}
+
+.thumbnails {
+  list-style: none;
+  padding: 0;
+}
+
+.thumbnail a > img {
+  width: 100%;
+  height: auto;
+}
+
+.collaborator {
+  tex-align: center;
+  .caption {
+    padding: 9px 2px;
+    overflow: hidden;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 1em;
+      background: -webkit-linear-gradient(left, rgba(#fff, 0), #fff);
+      background: linear-gradiend(to right, rgba(#fff, 0), #fff);
+    }
+  }
+}
+#info h4 {
+  margin-top: 30px;
+}
+
+.center {
+  text-align: center;
+}
+
+.thanks {
+  max-width: 100%;
+}
