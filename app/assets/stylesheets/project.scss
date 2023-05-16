@@ -1,0 +1,37 @@
+.project {
+  @include cleafix;
+
+  .image {
+    float: left;
+    margin: 0 15px 10px 0;
+  }
+}
+.project.inactive {
+  color: #999;
+
+  .info {
+    text-transform: none;
+  }
+
+  p {
+    font-style: italic;
+  }
+}
+
+#clear_languages, #clear_labels {
+  display: inline-block;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  top: -3px;
+}
+
+.js #filters input[type="submit"] {
+  display: none;
+}
+
+#filters .checkbox {
+  display: inline-block;
+  label {
+    padding: 0;
+  }
+}
