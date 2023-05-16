@@ -1,0 +1,294 @@
+.user a {
+  display: block;
+}
+
+.profile-title-block {
+  margin-bottom: 60px;
+  padding: 30px;
+  text-align: left;
+
+  .btn-xs {
+    vertical-align: top;
+  }
+
+  .language {
+    display: inline-block;
+    padding: .35em .7em .5em;
+    margin-right: 7px;
+  }
+
+  .username {
+    margin: 0 0 10px;
+  }
+}
+
+.profile-details {
+  min-height: 130px;
+}
+
+.profile-actions {
+  float: right;
+
+  .btn {
+    margin-left: 8px;
+    margin-bottom: 10px;
+  }
+
+  .octicon {
+    transform: translateY(3px);
+    -moz-transform: translateY(3px);
+    -webkit-transform: translateY(3px);
+  }
+}
+
+.profile-avatar {
+  position: relative;
+  margin: 0 auto -100px;
+  display: block;
+  max-width: 100%;
+}
+
+.profile-item {
+  margin-bottom: 5px;
+}
+
+.profile-item > span {
+  padding: 1px;
+}
+
+.tiny-title {
+  text-transform: uppercase;
+  color: #888;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.profile-pull-request-count {
+  position: absolute;
+  padding: 3px 8px;
+  background: $festive-colour;
+  color: #fff;
+  font-weight: bold;
+  margin: 0 15px;
+  right: 0;
+
+  transform: translateY(50%);
+  -moz-transform: translateY(50%);
+  -webkit-transform: translateY(50%);
+
+  // Ribbon <3
+  &:before, &:after {
+    display: block;
+    content: '';
+    border: 10px solid #8E2121;
+    position: absolute;
+    top: 5px;
+  }
+
+  &:before {
+    border-left-color: transparent;
+    left: -20px;
+  }
+
+  &:after {
+    border-right-color: transparent;
+    right: -20px;
+  }
+
+  .octicon {
+    fill: #fff;
+    transform: translateY(4px);
+    -moz-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+  }
+}
+
+@media (max-width: 767px) {
+  .profile-title-block {
+    margin-bottom: 25px;
+
+    .btn-xs {
+      width: auto;
+      margin-bottom: 8px;
+    }
+  }
+
+  .profile-actions {
+    float: none;
+  }
+
+  .profile-avatar {
+    margin: 0 0 15px;
+  }
+
+  .tiny-title {
+    display: block;
+  }
+
+  .profile-pull-request-count {
+    position: relative;
+  }
+
+  .profile-pull-request-count:before,
+  .profile-pull-request-count:after {
+    transform: none;
+    -moz-transform: none;
+    -webkit-transform: none;
+  }
+}
+
+.box-badge {
+  float: left;
+  list-style: none;
+  margin-bottom: 8px;
+  width: 100px;
+  height: 120px;
+  overflow: none;
+  text-align: center;
+
+  .bafge-name {
+    font-size: 12px;
+    line-height: 1.2em;
+    margin-top: 10px;
+  }
+}
+
+#team_box {
+  @extend .clearfix;
+  margin: 0 0 $grid-gutter-width/2 0;
+}
+
+.team-coders {
+  clear: both;
+  float: none;
+}
+
+.avatar-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+
+  .avatar-img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.avatar-list-lg {
+  background: #f0f0f0;
+  margin: 20px 0 20px 0;
+  font-size: 0;
+  overflow: hidden;
+
+  .avatar-cel {
+    width: 12.5%;
+    margin: 0;
+
+    .username {
+      display: block;
+    }
+
+    @media (max-width: 767px) {
+      width: 25%;
+    }
+  }
+
+  .avatar-img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.avatar-list-xs {
+  display: inline-block;
+  font-size: 0;
+
+  .avatar-cell {
+    width: 24px;
+    margin: 0 8px 0 0;
+  }
+
+  .avatar-img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.avatar-cell {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  list-style: none;
+  overflow: none;
+  margin-right: 10px;
+  margin-bottom: 10px;
+
+  .pr-badge {
+    position: absolute;
+    font-size: 11px;
+    font-weight: bold;
+    color: #fff;
+    bottom: 0;
+    right: 0;
+    padding: 4px;
+    background: #222;
+    line-height: 1;
+
+    .octicon {
+      fill: #fff;
+      transform: translateY(1px);
+      -moz-transform: translateY(1px);
+      -webkit-transform: translateY(1px);
+    }
+  }
+
+  .username {
+    display: none;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    right: 34px;
+    color: #fff;
+    line-height: 1;
+    font-size: 12px;
+    text-shadow: 0 0 1px #222, 0 0 1px, 0 0 1px #222;
+    font-weight: bold;
+    overflow: hidden;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .avatar-link {
+    display: block;
+  }
+}
+
+.sidebar-block {
+  padding: 30px;
+  margin: 40px 0 30px;
+  background: #f5f5f5;
+  position: relative;
+
+  .block-title {
+    background: #333;
+    color: #fff;
+    padding: 5px 10px;
+    top: -10px;
+    margin: 0;
+    position: absolute;
+  }
+}
+
+.event-item {
+  margin: 0 -30px;
+  padding: 10px 30px;
+  .octicon {
+    transform: translateY(2px);
+    -moz-transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    width: 12px;
+    text-align: center;
+  }
+}
