@@ -1,0 +1,125 @@
+$calendar-background: #f9f9f9;
+$festive-colour: $header-background;
+
+.calendar-inner {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.calendar-day {
+  $total-width: 100%;
+  $relative-width: $total-width/7;
+
+  width: $relative-width;
+  height: 120px;
+  border-top: 5px solid #eee;
+  background-color: $calendar-background;
+  overflow: hidden;
+  line-height: 100%;
+  display: block;
+  position: relative;
+  float: left;
+  padding: 8px;
+
+  &:nth-of-type(7n) {
+    margin-right: 0;
+  }
+
+  &.gifted {
+    border-color: $festive-colour;
+
+    &:hover {
+      .remove-gift {
+        display: block;
+      }
+
+      .remove-gift + .calendar-mday {
+        color: transparent;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    heigth: 50px;
+  }
+}
+
+.remove-gift {
+  background-color: $festive-colour;
+  height: 12px;
+  width: 12px;
+  line-height: 12px;
+  border-radius: 12px;
+  text-align: center;
+  display: none;
+  position: absolute;
+  top: 8px;
+  right: 6px;
+
+  a, a:hover { color: #fff; }
+}
+
+.calendar-mday {
+  float: right;
+  font-size: 90%;
+  color: #666;
+  margin-left: 8px;
+}
+
+.calendar-mday-today {
+  font-size: 120%;
+  font-weight: 800;
+  color: #333;
+}
+
+.calendar-padding {
+  background-color: $calendar-background;
+}
+
+.calendar-christmas {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.festive-star {
+  display: block;
+  font-size: 26px;
+  margin: 0 auto 5px;
+  clear: both;
+  color: $festive-colour;
+}
+
+@media (max-width: 767px) {
+  .calendar-mday {
+    margin-left: -45px;
+    width: 40px;
+    float: left;
+    display: inline-block;
+  }
+
+  .calendar-padding {
+    display: none;
+  }
+
+  .calendar-day {
+    display: block;
+    width: 100px;
+    float: none;
+    height: auto;
+    border-left: 5px solid #eee;
+    border-top: 0;
+    margin-bottom: 1px;
+    padding: 10px;
+    padding-left: 55px;
+
+    .remove-gift {
+      display: block;
+      position: relative;
+      float: right;
+      margin: -5px 5px 0 -5px;
+    }
+  }
+}
