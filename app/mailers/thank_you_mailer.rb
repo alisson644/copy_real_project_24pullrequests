@@ -5,7 +5,7 @@ class ThankYouMailer < ActionMailer::Base
 
   def thank_you(user)
     @user = user
-    mail :to         => user.email
+    mail :to         => user.email,
          :subject    => '[24 Pull Requests] Thank you for your contributions this xmas',
          'X-SMTPAPI' => '{"category": "Thank You"}'
   end
