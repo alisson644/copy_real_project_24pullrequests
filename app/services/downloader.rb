@@ -15,7 +15,7 @@ class Downloader
       organisation.save
       organisation
     end
-    (previous_org - current_orgs).each do |org|
+    (previous_orgs - current_orgs).each do |org|
       user.organisations.delete(org)
     end
   end
