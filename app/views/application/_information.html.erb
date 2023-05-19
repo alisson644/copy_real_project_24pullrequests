@@ -1,0 +1,30 @@
+<div class="alert alert-info">
+  <h3>
+    <%= t("information.title", year: PullrequestCopy::Application.current_year) %>
+  </h3>
+  <p>
+    <%= t("information.last_year_stats", year: PullrequestCopy::Application.current_year,
+      contributors: contributors_in(PullrequestCopy::Application.current_year),
+      contributions: contributions_in(PullrequestCopy::Application.current_year),
+      projects: projects_in(PullrequestCopy::Application.current_year)).html_safe %>
+  </p>
+  <p>
+    <%= t("information.get_ready", year: PullrequestCopy::Application.current_year) %>
+  </p>
+  <hr />
+  <p>
+    <%= t("information.help_open_source") %>
+  </p>
+  <h4>
+    <%= link_to 'CodeTriage', 'http://www.codetriage.com/' %>
+  </h4>
+  <p>
+    <%= t('information.codetriage') %>
+  </p>
+  <h4>
+    <%= link_to 'issuehub.pro', 'http://issuehub.pro/' %>
+  </h4>
+  <p>
+    <%= t("information.issuehubio") %>
+  </p>
+</div>
