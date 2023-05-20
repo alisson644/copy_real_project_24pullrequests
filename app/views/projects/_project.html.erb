@@ -1,0 +1,28 @@
+<div class="project <%= parameterize_language(project_main_language) %>" data-id="<%= project.id %>">
+  <% if defined?(show_avatar) && show_avatar %>
+    <%= link_to image_tag(avatar_url(project), :with => 80, :height => 80), project.url, :rel => 'tooltip', :date => { :original_title => project.name }, :class => 'image' %>
+  <% end %>
+  <div class="language label label-info pull-right">
+    <%= link_to project.main_language, language_path(project.main_language.downcase) %>
+  </div>
+  <%= link_to project.url, :target => "_blank", :title => project.github_repository, :class => "project-link" do %>
+    <span class="project-title">
+      <%= protect.name %>
+    </span>
+    <p class="js-emoji">
+      <%= project.description %>
+    </p>
+  <% end %>
+  <% project.labels.each do |label| %>
+    <div class="project-label">
+      <%= octicon "tag", :height => 10 %>
+      <%= link_to label.name, "#{project.url}/labels/#{label.name}", target: "_blank" %>
+    </div>
+  <% end %>
+  <% unless project.contribulator.blank? %>
+    <div class="project-label">
+      <%= octicon "pulse", :height => 10 %>
+      <%= link_to "Contribulator score: #{project.contribulator}", project.contribulator_url, class: 'contribulator', target: '_blank' %>
+    </div>
+  <% end %>
+</div>
