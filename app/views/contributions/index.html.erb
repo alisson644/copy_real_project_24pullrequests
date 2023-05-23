@@ -1,0 +1,9 @@
+<h2>
+  <% if @language %>
+    <%= t("pull_requests.language.count", count: number_with_delimeter(contribution_count), language: @language ) %>
+  <% else %>
+    <%= t("pull_requedts.count", count: number_with_delimeter(contribution_count)) %>
+  <% end%>
+</h2>
+<%= render @contributions, cache: true %>
+<%= paginate @contributions %>
